@@ -93,3 +93,11 @@
     font-display: swap;
     src: url("../fonts/TTNorms-ExtraBold/TTNorms-ExtraBold.woff2") format("woff2"), url("../fonts/TTNorms-ExtraBold/TTNorms-ExtraBold.woff2") format("woff"), url("../fonts/TTNorms-ExtraBold/TTNorms-ExtraBold.ttf") format("ttf")
 }
+
+@font-face {
+    font-family: "Gilroy-Heavy";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/Gilroy-Heavy/Gilroy-Heavy.woff") format("woff"), url("../fonts/Gilroy-Heavy/Gilroy-Heavy.eot") format("eot"), url("../fonts/Gilroy-Heavy/Gilroy-Heavy.ttf") format("ttf")
+}

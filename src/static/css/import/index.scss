@@ -1,0 +1,238 @@
+.container {
+    max-width: 1713px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+.header-desctop {
+    padding-top: 14px;
+    padding-bottom: 21px;
+    background: #E1F7FF;
+}
+
+.burger {
+    width: 40px;
+    height: 40px;
+    background: url('../img/open-menu.png') no-repeat center;
+}
+
+.header-desctop__item_left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    margin-left: 24px;
+}
+
+.logo__name {
+    font-family: "Gilroy-Heavy";
+    font-size: 38px;
+    padding-top: 14px;
+    margin-left: -9px;
+    line-height: 41px;
+
+    @media(max-width: 1599px) {
+        font-size: 25px;
+        margin-left: -6px;
+        padding-top: 3px;
+    }
+
+    span {
+        &:first-child {
+            color: #4576E6;
+        }
+
+        &:last-child {
+            color: #FE0199;
+        }
+    }
+}
+
+.logo__article {
+    font-family: "SFProDisplay";
+    font-weight: 500;
+    color: #4576E6;
+    font-size: 14px;
+    text-align: right;
+}
+
+.header-desctop__cont {
+    display: flex;
+    justify-content: space-between;
+
+    .header-desctop__item {
+        &:first-child {
+            width: 25%;
+        }
+
+        &:nth-child(2) {
+            width: 58%;
+        }
+
+        &:last-child {
+            width: 17%;
+        }
+    }
+}
+
+.logo__img {
+    width: 68px;
+
+    @media(max-width: 1599px) {
+        width: 48px;
+    }
+}
+
+.top-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    li {
+        &:not(:last-child) {
+            margin-right: 70px;
+        }
+    }
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        font-family: "SFProDisplay";
+        font-weight: 500;
+        color: #4E9BA6;
+        font-size: 18px;
+        display: inline-block;
+        position: relative;
+        border-bottom: 1px solid #4E9BA6;
+        margin-left: 44px;
+
+        @media(max-width: 1599px) {
+            font-size: 16px;
+        }
+
+        @media(min-width: 1600px) {
+            margin-left: 54px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 34px;
+            height: 34px;
+            left: -44px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 10em;
+
+            @media(min-width: 1600px) {
+                width: 44px;
+                height: 44px;
+                left: -54px;
+            }
+        }
+    }
+}
+
+.med-list:after {
+    background: white url('../img/checklist.png') no-repeat center;
+}
+
+.med-book:after {
+    background: white url('../img/document.png') no-repeat center;
+}
+
+.med-prof:after {
+    background: white url('../img/pharmacist.png') no-repeat center;
+}
+
+.med-caught:after {
+    background: white url('../img/seo-report.png') no-repeat center;
+}
+
+.header-desctop__right {
+    text-align: right;
+
+    li {
+        &:first-child {
+            margin-bottom: 7px;
+        }
+    }
+}
+
+.call-link {
+    font-family: "TTNorms";
+    font-weight: 600;
+    font-size: 26px;
+    color: #FE0199;
+
+    @media(max-width: 1599px) {
+        font-size: 20px;
+    }
+}
+
+.timework {
+    font-family: "SFProDisplay";
+    font-weight: 500;
+    font-size: 16px;
+    color: #565656;
+
+    @media(max-width: 1599px) {
+        font-size: 14px;
+    }
+}
+
+.hidden-menu-dsc {
+    background: #D1F3FF;
+    box-shadow: 0px 10px 20px rgba(42, 30, 117, 0.13);
+    padding-top: 18px;
+    padding-bottom: 42px;
+}
+
+.hidden-menu-dsc__top {
+    border-bottom: 1px solid #C7DAFF;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        font-family: "SFProDisplay";
+        font-weight: 500;
+        color: #333330;
+        font-size: 28px;
+        width: 23%;
+    }
+}
+
+.hidden-menu-dsc__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden-menu-dsc__links {
+    width: 23%;
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    a {
+        font-family: "SFProDisplay";
+        font-weight: 500;
+        color: #717171;
+        font-size: 16px;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom: 1px solid #717171;
+        }
+    }
+}
