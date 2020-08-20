@@ -27,6 +27,47 @@ $(document).ready(function () {
 
     $('.form-select select').selectric();
 
+    var metrSlider = new Swiper('.metr-slider', {
+        slidesPerView: 9,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next-mr',
+            prevEl: '.swiper-button-prev-mr',
+        },
+
+        breakpoints: {
+            499: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+
+            },
+            1599: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            }
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
     var myAdvSlider = undefined;
 
     function initSwiper() {
