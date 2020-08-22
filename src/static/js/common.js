@@ -173,6 +173,56 @@ $(document).ready(function () {
 		}
 	});
 
+	var advantages = new Swiper('.advantages-slider', {
+		loop: true,
+		spaceBetween: 60,
+		slidesPerView: 6,
+		init: false,
+		navigation: {
+			nextEl: '.advantages-block .swiper-button-next',
+			prevEl: '.advantages-block .swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+		breakpoints: {
+			499: {
+				slidesPerView: 1,
+				spaceBetween: 0
+			},
+			767: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			1099: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			1599: {
+				slidesPerView: 4,
+				spaceBetween: 20
+			},
+			1919: {
+				spaceBetween: 10,
+				slidesPerView: 5
+			}
+		}
+	});
+
+	if (window.innerWidth > 1100) {
+		advantages.init();
+	}
+
+	window.addEventListener('resize', function () {
+		let width = this.innerWidth;
+
+		if (width < 1100 && advantages) {
+			advantages.destroy();
+		}
+	});
+
 });
 
 let btn = document.querySelector('.next');
