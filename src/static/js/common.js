@@ -211,17 +211,79 @@ $(document).ready(function () {
 		}
 	});
 
-	if (window.innerWidth > 1100) {
-		advantages.init();
-	}
-
 	window.addEventListener('resize', function () {
 		let width = this.innerWidth;
 
 		if (width < 1100 && advantages) {
+			anythingSwiper.destroy();
 			advantages.destroy();
+		} else {
+			anythingSwiper.init();
 		}
 	});
+
+
+	new Swiper('.anything-up-slider', {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 7,
+		navigation: {
+			nextEl: '.anything-up-block .swiper-button-next',
+			prevEl: '.anything-up-block .swiper-button-prev',
+		},
+		breakpoints: {
+			499: {
+				slidesPerView: 1.3,
+				spaceBetween: 0
+			},
+			767: {
+				slidesPerView: 2.5,
+				spaceBetween: 20
+			},
+			1099: {
+				slidesPerView: 3.5,
+				spaceBetween: 20
+			},
+			1279: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			1400: {
+				slidesPerView: 4,
+				spaceBetween: 40
+			},
+			1919: {
+				spaceBetween: 10,
+				slidesPerView: 5
+			}
+		}
+	});
+
+	var anythingSwiper = new Swiper('.anything-bottom-slider', {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 4,
+		init: false,
+		navigation: {
+			nextEl: '.anything-bottom-block .swiper-button-next',
+			prevEl: '.anything-bottom-block .swiper-button-prev',
+		},
+		breakpoints: {
+			1180: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			1700: {
+				spaceBetween: 10,
+				slidesPerView: 3
+			}
+		}
+	});
+
+	if (window.innerWidth >= 1100) {
+		advantages.init();
+		anythingSwiper.init();
+	}
 
 });
 
