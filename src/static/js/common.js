@@ -308,6 +308,8 @@ $(document).ready(function () {
 
 	$('.category-select-one').selectric();
 	$('.category-select-two').selectric();
+	$('.feedback-select-one').selectric();
+	$('.feedback-select-two').selectric();
 
 });
 
