@@ -310,6 +310,9 @@ $(document).ready(function () {
 	$('.category-select-two').selectric();
 	$('.feedback-select-one').selectric();
 	$('.feedback-select-two').selectric();
+	$('.centers-select1').selectric();
+	$('.centers-select2').selectric();
+	$('.centers-select3').selectric();
 
 });
 
