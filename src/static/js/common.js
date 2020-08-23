@@ -27,36 +27,6 @@ $(document).ready(function () {
 
 	$('.form-select select').selectric();
 
-	var metrSlider = new Swiper('.metr-slider', {
-		slidesPerView: 9,
-		spaceBetween: 30,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next-mr',
-			prevEl: '.swiper-button-prev-mr',
-		},
-
-		breakpoints: {
-			499: {
-				slidesPerView: 1,
-				spaceBetween: 20,
-			},
-			767: {
-				slidesPerView: 2,
-				spaceBetween: 20,
-			},
-			991: {
-				slidesPerView: 3,
-				spaceBetween: 20,
-
-			},
-			1599: {
-				slidesPerView: 4,
-				spaceBetween: 20,
-			}
-		}
-	});
-
 	var myAdvSlider = undefined;
 
 	function initSwiper() {
@@ -285,17 +255,75 @@ $(document).ready(function () {
 		anythingSwiper.init();
 	}
 
+	new Swiper('.metr-slider', {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 9,
+		navigation: {
+			nextEl: '.metr-slider-inner .swiper-button-next',
+			prevEl: '.metr-slider-inner .swiper-button-prev',
+		},
+		breakpoints: {
+			499: {
+				slidesPerView: 1,
+				spaceBetween: 0
+			},
+			600: {
+				slidesPerView: 2,
+				spaceBetween: 0
+			},
+			991: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 20
+			},
+			1400: {
+				spaceBetween: 5,
+				slidesPerView: 5
+			},
+			1600: {
+				spaceBetween: 10,
+				slidesPerView: 6
+			},
+			1919: {
+				spaceBetween: 10,
+				slidesPerView: 7
+			}
+		}
+	});
+
+
+	new Swiper('.category-slider', {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.category-slider .swiper-button-next',
+			prevEl: '.category-slider .swiper-button-prev',
+		}
+	});
+
+	$('.category-select-one').selectric();
+	$('.category-select-two').selectric();
+
 });
 
-let btn = document.querySelector('.next');
-btn.addEventListener('click', function (e) {
-	e.preventDefault();
+let btn = document.querySelectorAll('.next');
 
-	let hideText = document.querySelector('.text .hide');
+btn.forEach((item) => {
+	item.addEventListener('click', function (e) {
+		e.preventDefault();
 
-	hideText.classList.toggle('hide-active');
-	this.style.display = "none";
-	document.querySelector('.points').style.display = 'none';
+		let hideText = item.parentElement.parentElement.querySelector('.hide');
+		console.log(hideText);
+
+		hideText.classList.toggle('hide-active');
+		this.style.display = "none";
+		item.parentElement.querySelector('.points').style.display = 'none';
+	});
 });
 
 window.addEventListener('resize', function () {
