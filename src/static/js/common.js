@@ -314,6 +314,36 @@ $(document).ready(function () {
 	$('.centers-select2').selectric();
 	$('.centers-select3').selectric();
 
+
+	$('.centers-select1').selectric().on('change', function () {
+		let link = $(this)[0].selectedOptions[0].dataset.href;
+
+		document.location.href = link;
+	});
+
+	$('.centers-select2').selectric().on('change', function () {
+		let link = $(this)[0].selectedOptions[0].dataset.href;
+
+		document.location.href = link;
+	});
+
+	$('.centers-select3').selectric().on('change', function () {
+		let link = $(this)[0].selectedOptions[0].dataset.href;
+
+		document.location.href = link;
+	});
+
+});
+
+let questions = document.querySelectorAll('.anything-bottom-item h3 span');
+questions.forEach((item) => {
+	item.addEventListener('mouseover', function () {
+		item.parentElement.parentElement.querySelector('.tooltip').style.display = "block";
+	});
+
+	item.addEventListener('mouseout', function () {
+		item.parentElement.parentElement.querySelector('.tooltip').removeAttribute('style');
+	});
 });
 
 let btn = document.querySelectorAll('.next');
