@@ -1926,10 +1926,14 @@
 	@media (min-width: 1400px) {
 		display: flex;
 		padding-top: 42px;
+		max-width: 1006px;
+	}
+
+	@media (min-width: 1600px) {
 		max-width: 980px;
 	}
 
-	@media (min-width: 1650px) {
+	@media (min-width: 1700px) {
 		max-width: 1006px;
 	}
 
