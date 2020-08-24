@@ -252,7 +252,9 @@ $(document).ready(function () {
 
 	if (window.innerWidth >= 1100) {
 		advantages.init();
-		anythingSwiper.init();
+		if (document.querySelector('.initPage')) {
+			anythingSwiper.init();
+		}
 	}
 
 	new Swiper('.metr-slider', {
@@ -370,5 +372,7 @@ window.addEventListener('resize', function () {
 		document.querySelector('.text .hide').classList.remove('hide-active');
 	}
 });
+
+
 
 
